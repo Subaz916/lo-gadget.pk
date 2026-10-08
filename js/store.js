@@ -316,7 +316,7 @@ export function mountChrome(active = '') {
       <div class="promo-strip">Free shipping across Pakistan with code <b>FREESHIPPING250</b> — apply it at checkout</div>
       <div class="container head-inner">
         <button class="icon-btn" type="button" data-menu aria-label="Menu">${icons.menu}</button>
-        <a class="logo" href="${siteUrl('index.html')}">LOGA<span>GET</span><em>.PK</em></a>
+        <a class="logo" href="${siteUrl('index.html')}">LOGADGET.PK</a>
         <nav class="nav" data-nav>
           <a href="${siteUrl('index.html')}" ${active === 'home' ? 'class="active"' : ''}>Home</a>
           <a href="${siteUrl('products.html')}" ${active === 'shop' ? 'class="active"' : ''}>Shop</a>
@@ -350,7 +350,7 @@ export function mountChrome(active = '') {
     footer.innerHTML = `
       <div class="container foot-grid">
         <div>
-          <a class="logo" href="${siteUrl('index.html')}">LOGA<span>GET</span><em>.PK</em></a>
+          <a class="logo" href="${siteUrl('index.html')}">LOGADGET.PK</a>
           <p class="foot-text">Genuine gadgets, honest prices and cash on delivery anywhere in Pakistan.</p>
         </div>
         <div>

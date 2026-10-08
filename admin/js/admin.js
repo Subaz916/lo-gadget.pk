@@ -47,7 +47,7 @@ function renderShell(page, title, email, admin) {
   const topbar = document.getElementById('topbar')
 
   sidebar.innerHTML = `
-    <a class="logo" href="../index.html">LOGA<span>GET</span><em>.PK</em></a>
+    <a class="logo" href="../index.html">LOGADGET.PK</a>
     <div class="side-label">Store</div>
     ${NAV.map(
       (item) => `<a class="side-link ${item.page === page ? 'active' : ''}" href="${item.href}">

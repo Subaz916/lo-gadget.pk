@@ -78,11 +78,10 @@ p { margin: 0 0 1em; }
 .head-inner { display: flex; align-items: center; gap: 18px; height: 66px; }
 
 .logo {
-  font-weight: 800; font-size: 1.25rem; letter-spacing: -.03em; white-space: nowrap;
+  font-weight: 900; font-size: 1.7rem; letter-spacing: -.02em; white-space: nowrap;
+  text-transform: uppercase; color: var(--text);
   display: inline-flex; align-items: baseline;
 }
-.logo span { color: var(--accent); }
-.logo em { font-style: normal; color: var(--muted); font-size: .8em; }
 
 .nav { display: flex; gap: 4px; margin-left: 6px; }
 .nav a {

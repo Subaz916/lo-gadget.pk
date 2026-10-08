@@ -73,7 +73,7 @@ function renderShell() {
   const topbar = document.getElementById('topbar')
 
   sidebar.innerHTML = `
-    <a class="logo" href="index.html">LOGA<span>GET</span><em>.PK</em></a>
+    <a class="logo" href="index.html">LOGADGET.PK</a>
     <div class="side-label">Control panel</div>
     ${NAV.map(
       (item) => `<a class="side-link" data-section="${item.section}" href="#/${item.section}">
