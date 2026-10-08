@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order confirmed — LOGADGET.PK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="announcement" hidden></div>
+  <header id="site-header" class="site-header"></header>
+
+  <main class="container">
+    <div class="confirm-hero">
+      <div class="tick">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5.5 5.5L20 7"/></svg>
+      </div>
+      <span class="eyebrow">Order confirmed</span>
+      <h1>Thank you, <span id="cust-name">customer</span>!</h1>
+      <p class="muted" style="max-width:56ch;margin:0 auto">Your order has been received. We will call you to confirm before dispatching your parcel.</p>
+      <div class="order-number" id="order-number">LG-...</div>
+      <div class="small muted" id="order-estimate">Estimated delivery: calculating...</div>
+      <div class="hero-cta" style="justify-content:center;margin-top:26px">
+        <button class="btn btn-ghost" type="button" id="print-btn">Print / save receipt</button>
+        <a class="btn btn-primary" href="products.html">Continue shopping</a>
+        <a class="btn btn-ghost" id="wa-btn" href="#" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="cart-layout" style="grid-template-columns:1.4fr 1fr">
+      <div class="panel">
+        <h3>Order details</h3>
+        <div id="order-items" class="muted">Loading order...</div>
+        <div style="margin-top:16px">
+          <div class="summary-row"><span>Subtotal</span><b id="c-subtotal">—</b></div>
+          <div class="summary-row" id="c-discount-row" hidden><span>Discount</span><b class="save" id="c-discount">—</b></div>
+          <div class="summary-row"><span>Shipping</span><b id="c-shipping">—</b></div>
+          <div class="summary-row total"><span>Total (Cash on Delivery)</span><b id="c-total">—</b></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="panel">
+          <h3>Delivery to</h3>
+          <p style="margin:0" id="c-address">—</p>
+          <p class="muted small" style="margin:10px 0 0" id="c-contact">—</p>
+          <div id="c-notes-wrap" hidden style="margin-top:14px">
+            <h3 style="margin-bottom:6px">Your note</h3>
+            <p class="muted small" id="c-notes" style="margin:0"></p>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>What happens next?</h3>
+          <div class="feature" style="border:0;background:none;padding:8px 0">
+            <div class="f-icon">1</div>
+            <div><h3>We call to confirm</h3><p>Usually within a few hours during business time.</p></div>
+          </div>
+          <div class="feature" style="border:0;background:none;padding:8px 0">
+            <div class="f-icon">2</div>
+            <div><h3>Dispatch in 24 hours</h3><p>Your parcel is packed and handed to the courier.</p></div>
+          </div>
+          <div class="feature" style="border:0;background:none;padding:8px 0">
+            <div class="f-icon">3</div>
+            <div><h3>Pay on delivery</h3><p>Hand the cash to the rider when the order arrives.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <script type="module" src="js/confirmation.js"></script>
+</body>
+</html>

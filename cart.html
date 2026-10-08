@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your cart — LOGADGET.PK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="announcement" hidden></div>
+  <header id="site-header" class="site-header"></header>
+
+  <main class="container">
+    <div class="page-head">
+      <h1>Your cart</h1>
+      <p>Review your gadgets before checkout.</p>
+    </div>
+
+    <div class="steps">
+      <span class="on">1. Cart</span><i>›</i><span>2. Checkout</span><i>›</i><span>3. Confirmation</span>
+    </div>
+
+    <div class="fs-banner" id="fs-banner" hidden>
+      <div>
+        <b>Free shipping with code FREESHIPPING250</b>
+        <span class="small">Apply this code at checkout and your Rs 250 shipping becomes FREE.</span>
+      </div>
+      <button class="btn btn-primary" type="button" id="fs-apply">Apply code</button>
+    </div>
+
+    <div class="cart-layout" id="cart-layout" hidden>
+      <div class="panel" id="cart-items"></div>
+
+      <div class="panel" id="cart-summary">
+        <h3>Order summary</h3>
+        <div class="summary-row"><span>Subtotal</span><b id="sum-subtotal">Rs 0</b></div>
+        <div class="summary-row"><span>Items</span><b id="sum-count">0</b></div>
+        <div class="summary-row"><span>Shipping</span><b>Rs 250</b></div>
+        <div class="summary-row total"><span>Estimated total</span><b id="sum-total">Rs 0</b></div>
+        <a class="btn btn-primary btn-block btn-lg" href="checkout.html" style="margin-top:18px">Proceed to checkout</a>
+        <a class="btn btn-ghost btn-block" href="products.html" style="margin-top:10px">Continue shopping</a>
+        <div class="notice info" style="margin-top:18px;margin-bottom:0">Cash on delivery available nationwide.</div>
+      </div>
+    </div>
+
+    <div id="cart-empty" hidden style="padding-bottom:60px"></div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <script type="module" src="js/cart.js"></script>
+</body>
+</html>

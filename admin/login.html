@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin login — LOGADGET.PK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="admin">
+  <div class="login-wrap">
+    <form class="login-card" id="login-form">
+      <a class="logo" href="../index.html">LOGA<span>GET</span><em>.PK</em></a>
+      <div class="sub">Sign in to the admin panel</div>
+
+      <div class="notice error" id="error-box" hidden></div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input class="input" id="email" type="email" placeholder="admin@logadget.pk" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input class="input" id="password" type="password" placeholder="••••••••" autocomplete="current-password" required>
+      </div>
+      <button class="btn btn-primary btn-block btn-lg" type="submit" id="login-btn">Sign in</button>
+      <p class="small muted center" style="margin-top:18px">Admins are created in Supabase Authentication, then added to the <code style="color:var(--accent)">admin_users</code> table.</p>
+      <a class="small muted center" style="display:block" href="../index.html">← Back to store</a>
+    </form>
+  </div>
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>

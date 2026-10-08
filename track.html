@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Track your order — LOGADGET.PK</title>
+  <meta name="description" content="Track your LOGADGET.PK order using your order number and phone number.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="announcement" hidden></div>
+  <header id="site-header" class="site-header"></header>
+
+  <main class="container">
+    <div class="page-head" style="text-align:center">
+      <span class="eyebrow">Order tracking</span>
+      <h1>Track your order</h1>
+      <p>Enter your order number and the phone number you used at checkout.</p>
+    </div>
+
+    <div class="panel" style="max-width:640px;margin:0 auto">
+      <form id="track-form" novalidate>
+        <div id="track-error" hidden></div>
+        <div class="form-grid">
+          <div class="field">
+            <label for="track-order">Order number *</label>
+            <input class="input" id="track-order" type="text" placeholder="LG-XXXXXX" autocomplete="off" required>
+          </div>
+          <div class="field">
+            <label for="track-phone">Phone number *</label>
+            <input class="input" id="track-phone" type="tel" placeholder="03XX XXXXXXX" autocomplete="tel" required>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit" id="track-btn">Track order</button>
+      </form>
+    </div>
+
+    <div id="track-result" hidden style="margin-top:26px">
+      <div class="panel">
+        <div class="panel-head" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+          <div>
+            <div class="small muted">Order</div>
+            <h3 style="margin:2px 0 0" id="tr-number">—</h3>
+          </div>
+          <div id="tr-badge"></div>
+        </div>
+        <div id="tr-timeline" style="margin-top:8px"></div>
+        <div class="small muted" id="tr-placed" style="margin-top:6px"></div>
+
+        <div class="share-block" id="tr-share" hidden>
+          <div class="small muted">Share this tracking link with anyone</div>
+          <div class="share-row">
+            <input class="input" id="tr-link" type="text" readonly aria-label="Tracking link">
+            <button class="btn btn-ghost" type="button" id="tr-copy">Copy</button>
+            <a class="btn btn-ghost" id="tr-share-wa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-layout" style="margin-top:18px">
+        <div class="panel">
+          <h3>Order items</h3>
+          <div id="tr-items" class="muted"></div>
+          <div style="margin-top:16px">
+            <div class="summary-row"><span>Subtotal</span><b id="tr-subtotal">—</b></div>
+            <div class="summary-row" id="tr-discount-row" hidden><span>Discount</span><b class="save" id="tr-discount">—</b></div>
+            <div class="summary-row"><span>Shipping</span><b id="tr-shipping">—</b></div>
+            <div class="summary-row total"><span>Total</span><b id="tr-total">—</b></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="panel">
+            <h3>Delivery details</h3>
+            <p style="margin:0" id="tr-address">—</p>
+            <p class="muted small" style="margin:10px 0 0" id="tr-contact">—</p>
+            <div id="tr-notes-wrap" hidden style="margin-top:14px">
+              <h3 style="margin-bottom:6px">Your note</h3>
+              <p class="muted small" id="tr-notes" style="margin:0"></p>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>Need help?</h3>
+            <p class="muted small" style="margin:0 0 14px">Message us on WhatsApp with your order number and we will update you.</p>
+            <a class="btn btn-ghost btn-block" id="tr-wa" href="#" target="_blank" rel="noopener" hidden>Chat on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="center" style="margin-top:26px">
+      <a class="btn btn-ghost btn-sm" href="products.html">Continue shopping</a>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <script type="module" src="js/track.js"></script>
+</body>
+</html>

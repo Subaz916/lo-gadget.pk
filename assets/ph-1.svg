@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#151a12"/>
+      <stop offset="100%" stop-color="#0a0b0f"/>
+    </linearGradient>
+    <linearGradient id="glow1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c8f751"/>
+      <stop offset="100%" stop-color="#7dd3fc"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg1)"/>
+  <circle cx="400" cy="380" r="250" fill="#c8f751" opacity="0.07"/>
+  <g transform="translate(400 370)">
+    <rect x="-150" y="-110" width="300" height="230" rx="80" fill="#1b2130" stroke="url(#glow1)" stroke-width="6"/>
+    <rect x="-92" y="-46" width="76" height="120" rx="38" fill="#0f131b" stroke="#c8f751" stroke-width="5"/>
+    <rect x="16" y="-46" width="76" height="120" rx="38" fill="#0f131b" stroke="#c8f751" stroke-width="5"/>
+    <circle cx="-54" cy="82" r="16" fill="#c8f751"/>
+    <circle cx="54" cy="82" r="16" fill="#7dd3fc"/>
+  </g>
+  <text x="400" y="700" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800" fill="#eef1f7" letter-spacing="6">LOGADGET</text>
+  <text x="400" y="742" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="#c8f751" letter-spacing="8">.PK STORE</text>
+</svg>

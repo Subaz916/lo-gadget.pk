@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LOGADGET.PK — Gadgets delivered across Pakistan</title>
+  <meta name="description" content="Shop earbuds, smart watches, chargers and gaming gear at LOGADGET.PK. Cash on delivery all over Pakistan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="announcement" hidden></div>
+  <header id="site-header" class="site-header"></header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-box">
+          <div class="hero-inner">
+            <div class="hero-copy">
+              <span class="eyebrow">Pakistan's gadget store</span>
+              <h1>Gear that keeps up with <span>you.</span></h1>
+              <p>Earbuds, smart watches, chargers and gaming gear — genuine products, honest prices and cash on delivery anywhere in Pakistan.</p>
+              <div class="hero-cta">
+                <a class="btn btn-primary btn-lg" href="products.html">Shop all products</a>
+                <a class="btn btn-ghost btn-lg" href="products.html?featured=1">View featured</a>
+              </div>
+              <div class="hero-stats">
+                <div><strong data-stat="products">50+</strong><span>Products in store</span></div>
+                <div><strong>COD</strong><span>Pay on delivery</span></div>
+                <div><strong>2–5 days</strong><span>Delivery nationwide</span></div>
+              </div>
+            </div>
+            <div class="hero-art">
+              <img src="assets/ph-2.svg" alt="Featured gadget">
+              <a class="hero-tag" data-hero-tag href="products.html" hidden>
+                <strong data-hero-name></strong>
+                <span class="small muted" data-hero-price></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Browse</span>
+            <h2>Shop by category</h2>
+          </div>
+          <a class="btn btn-ghost btn-sm" href="products.html">All products</a>
+        </div>
+        <div class="cat-grid" id="categories">
+          <div class="spinner"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Hand picked</span>
+            <h2>Featured products</h2>
+          </div>
+          <a class="btn btn-ghost btn-sm" href="products.html?featured=1">See all</a>
+        </div>
+        <div class="p-grid" id="featured">
+          <div class="spinner"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container feature-strip">
+        <div class="feature">
+          <div class="f-icon" data-icon="cod"></div>
+          <div><h3>Cash on delivery</h3><p>Pay when the parcel reaches your door, anywhere in Pakistan.</p></div>
+        </div>
+        <div class="feature">
+          <div class="f-icon" data-icon="truck"></div>
+          <div><h3>Fast nationwide delivery</h3><p>Orders are dispatched within 24 hours and arrive in 2–5 days.</p></div>
+        </div>
+        <div class="feature">
+          <div class="f-icon" data-icon="shield"></div>
+          <div><h3>Genuine products</h3><p>Every gadget is tested, sealed and covered by warranty.</p></div>
+        </div>
+        <div class="feature">
+          <div class="f-icon" data-icon="support"></div>
+          <div><h3>Real support</h3><p>Chat with us on WhatsApp before and after you order.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Fresh drops</span>
+            <h2>New arrivals</h2>
+          </div>
+          <a class="btn btn-ghost btn-sm" href="products.html?sort=new">See all</a>
+        </div>
+        <div class="p-grid" id="latest">
+          <div class="spinner"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="panel center" style="padding:44px 24px;background:linear-gradient(160deg,var(--surface-2),var(--surface))">
+          <span class="eyebrow">Already ordered?</span>
+          <h2>Track your order</h2>
+          <p class="muted" style="max-width:52ch;margin:0 auto 22px">Enter your order number and phone number to see the live status of your parcel.</p>
+          <a class="btn btn-primary btn-lg" href="track.html">Track your order</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="panel center" style="padding:46px 24px;background:linear-gradient(160deg,var(--surface-2),var(--surface))">
+          <span class="eyebrow">Need help deciding?</span>
+          <h2>Message us on WhatsApp</h2>
+          <p class="muted" style="max-width:52ch;margin:0 auto 22px">Tell us your budget and we will recommend the right gadget for you.</p>
+          <a class="btn btn-primary btn-lg" id="wa-cta" href="products.html">Browse the store</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script type="module" src="js/home.js"></script>
+</body>
+</html>

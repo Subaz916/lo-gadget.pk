@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product — LOGADGET.PK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="announcement" hidden></div>
+  <header id="site-header" class="site-header"></header>
+
+  <main class="container" id="main">
+    <div class="spinner" id="loader"></div>
+
+    <div id="product-view" hidden>
+      <nav class="breadcrumb" id="breadcrumb"></nav>
+
+      <div class="product-layout">
+        <div class="gallery">
+          <div class="gallery-main"><img id="main-image" src="" alt=""></div>
+          <div class="gallery-thumbs" id="thumbs"></div>
+        </div>
+
+        <div class="info">
+          <div class="pd-meta" id="pd-meta"></div>
+          <h1 class="pd-title" id="pd-title"></h1>
+          <div class="pd-price">
+            <span class="now" id="pd-price"></span>
+            <span class="was" id="pd-compare" hidden></span>
+            <span class="off" id="pd-off" hidden></span>
+          </div>
+
+          <div class="pd-badges" id="pd-badges"></div>
+
+          <div id="option-groups"></div>
+
+          <div class="field" style="max-width:170px;margin-top:22px">
+            <label for="qty">Quantity</label>
+            <div class="qty">
+              <button type="button" id="qty-minus" aria-label="Decrease quantity"></button>
+              <input type="number" id="qty" value="1" min="1" max="99">
+              <button type="button" id="qty-plus" aria-label="Increase quantity"></button>
+            </div>
+          </div>
+
+          <div class="buy-row">
+            <button class="btn btn-primary btn-lg" id="add-btn" type="button">Add to cart</button>
+            <button class="btn btn-ghost btn-lg" id="buy-btn" type="button">Buy now</button>
+          </div>
+
+          <div class="pd-desc" style="margin-top:28px">
+            <h3>Product details</h3>
+            <p id="pd-desc"></p>
+            <div class="tag-list" id="pd-tags"></div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section" style="padding-top:0">
+        <div class="section-head">
+          <div><span class="eyebrow">You may also like</span><h2>Related products</h2></div>
+        </div>
+        <div class="p-grid" id="related" style="margin-bottom:60px"></div>
+      </section>
+    </div>
+
+    <div id="not-found" hidden>
+      <div class="empty">
+        <div class="empty-icon"><svg viewBox="0 0 24 24" width="58" height="58" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg></div>
+        <h3>Product not found</h3>
+        <p>This product may have been removed or the link is incorrect.</p>
+        <a class="btn btn-primary" href="products.html">Back to shop</a>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <script type="module" src="js/product.js"></script>
+</body>
+</html>

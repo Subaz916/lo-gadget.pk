@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add product — LOGADGET.PK Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="admin">
+  <div class="admin-layout" id="admin-layout">
+    <aside class="sidebar" id="sidebar"></aside>
+    <div class="admin-main">
+      <header class="topbar" id="topbar"></header>
+      <div class="admin-content">
+        <div class="panel-head">
+          <h2 style="margin:0" id="form-title">Add product</h2>
+          <a class="btn btn-ghost btn-sm" href="products.html">← Back to products</a>
+        </div>
+
+        <form id="product-form">
+          <div style="display:grid;grid-template-columns:1.35fr 1fr;gap:20px;align-items:start" class="form-cols">
+            <div>
+              <div class="panel">
+                <h3>Basic information</h3>
+                <div class="grid-2">
+                  <div class="field span-2">
+                    <label for="name">Product name *</label>
+                    <input class="input" id="name" type="text" placeholder="e.g. LogaPods Pro Wireless Earbuds" required>
+                  </div>
+                  <div class="field">
+                    <label for="slug">URL slug *</label>
+                    <input class="input" id="slug" type="text" placeholder="logapods-pro">
+                  </div>
+                  <div class="field">
+                    <label for="brand">Brand</label>
+                    <input class="input" id="brand" type="text" placeholder="e.g. Logadget">
+                  </div>
+                  <div class="field">
+                    <label for="category">Category</label>
+                    <select class="select" id="category"><option value="">Uncategorised</option></select>
+                  </div>
+                  <div class="field">
+                    <label for="sku">SKU</label>
+                    <input class="input" id="sku" type="text" placeholder="LG-AUD-001">
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel">
+                <h3>Images</h3>
+                <div class="drop-zone" id="drop-zone">
+                  Click or drop images here to upload<br>
+                  <span class="small">PNG, JPG or WEBP — up to 5MB each</span>
+                </div>
+                <input type="file" id="file-input" accept="image/*" multiple hidden>
+                <div class="image-grid" id="image-grid" style="margin-top:14px"></div>
+              </div>
+
+              <div class="panel">
+                <h3>Variants / options</h3>
+                <p class="small muted" style="margin-top:-8px">Options like colour or size. Leave empty for a single-version product.</p>
+                <div id="variant-rows"></div>
+                <button class="btn btn-ghost btn-sm" type="button" id="add-variant">+ Add option</button>
+              </div>
+            </div>
+
+            <div>
+              <div class="panel">
+                <h3>Pricing &amp; stock</h3>
+                <div class="grid-2">
+                  <div class="field">
+                    <label for="price">Price (Rs) *</label>
+                    <input class="input" id="price" type="number" min="0" step="1" placeholder="6499" required>
+                  </div>
+                  <div class="field">
+                    <label for="compare_price">Compare at price (Rs)</label>
+                    <input class="input" id="compare_price" type="number" min="0" step="1" placeholder="8999">
+                    <span class="hint">Shown struck through</span>
+                  </div>
+                  <div class="field span-2">
+                    <label for="stock">Stock quantity *</label>
+                    <input class="input" id="stock" type="number" min="0" step="1" value="0" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel">
+                <h3>Description</h3>
+                <div class="field">
+                  <label for="short_description">Short description</label>
+                  <input class="input" id="short_description" type="text" placeholder="One line summary">
+                </div>
+                <div class="field">
+                  <label for="description">Full description</label>
+                  <textarea class="textarea" id="description" placeholder="Features, specs, what is in the box..."></textarea>
+                </div>
+                <div class="field" style="margin-bottom:0">
+                  <label for="tags">Tags</label>
+                  <input class="input" id="tags" type="text" placeholder="earbuds, anc, bluetooth">
+                  <span class="hint">Comma separated, used for search</span>
+                </div>
+              </div>
+
+              <div class="panel">
+                <h3>Visibility</h3>
+                <label class="switch-wrap" style="margin-bottom:12px">
+                  <input type="checkbox" id="is_active" checked> Active (visible in store)
+                </label>
+                <label class="switch-wrap">
+                  <input type="checkbox" id="is_featured"> Featured on home page
+                </label>
+              </div>
+
+              <div id="form-error" hidden></div>
+              <button class="btn btn-primary btn-block btn-lg" type="submit" id="save-btn">Save product</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="js/product-form.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Products — LOGADGET.PK Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="admin">
+  <div class="admin-layout" id="admin-layout">
+    <aside class="sidebar" id="sidebar"></aside>
+    <div class="admin-main">
+      <header class="topbar" id="topbar"></header>
+      <div class="admin-content">
+        <div class="panel-head">
+          <h2 style="margin:0">Products</h2>
+          <a class="btn btn-primary btn-sm" href="product-form.html">+ Add product</a>
+        </div>
+
+        <div class="toolbar-admin">
+          <div class="grow search-box">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+            <input class="input" id="search" type="search" placeholder="Search products by name, brand or SKU...">
+          </div>
+          <select class="select" id="filter-cat" style="width:auto;min-width:170px"><option value="">All categories</option></select>
+          <select class="select" id="filter-status" style="width:auto;min-width:140px">
+            <option value="">All statuses</option>
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+            <option value="low">Low stock</option>
+          </select>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data">
+            <thead>
+              <tr><th>Product</th><th>Category</th><th class="num">Price</th><th class="num">Stock</th><th>Status</th><th></th></tr>
+            </thead>
+            <tbody id="rows"><tr><td colspan="6"><div class="sk" style="height:60px"></div></td></tr></tbody>
+          </table>
+        </div>
+        <p class="small muted" id="row-count" style="margin-top:12px"></p>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="js/products.js"></script>
+</body>
+</html>
